@@ -28,13 +28,16 @@
     });
   }
 
-  window.setGridHeight('.product-card-wrapper .card__heading'); 
-  
-  setTimeout(() => {
-    window.setGridHeight('.product-card-wrapper .card__heading');
+ setTimeout(() => {
+    matchHeightCallback();
   }, 2000)
   
   window.addEventListener('resize', function(event){
-    window.setGridHeight('.product-card-wrapper .card__heading');
+    matchHeightCallback();
   });
+
+  let matchHeightCallback = () => {
+    window.setGridHeight('.product-card-wrapper .card__heading'); 
+  }
+  matchHeightCallback();
 }
