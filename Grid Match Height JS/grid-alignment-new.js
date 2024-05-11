@@ -19,7 +19,6 @@
     let offsets = gridOffsets.map(element => element.offsetTop);
     gridRowOffsets = [...new Set(offsets)];
 
-    console.log(gridRowOffsets,gridOffsets)
     gridRowOffsets.forEach(rowOffset => {
       let rowGrids = gridOffsets.filter(grid => (grid.offsetTop == rowOffset));
       let comanElementHeight = Math.max.apply(Math,(rowGrids.map(ele => ele.selectorHeight)));
